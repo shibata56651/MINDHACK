@@ -9,7 +9,7 @@
 .display-top {
   width: 100vw;
   height: 100vh;
-  background: url("./background.webp") -5% -10%, url("./background.png");
+  /* background: url("./background.webp") -5% -10%, url("./background.png"); */
 }
 
 .App-logo {
@@ -17,9 +17,20 @@
   pointer-events: none;
 }
 
+#mv {
+  width: 100vw;
+  height: 100vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .flower-animation {
+    animation: mind-hack-flower 1.4s ease-in-out;
   }
 }
 
@@ -44,5 +55,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes mind-hack-flower {
+  from {
+    transform: rotate(0deg) scale(0);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
   }
 }
