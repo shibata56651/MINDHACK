@@ -12,6 +12,7 @@ h1,h2,h3,h4,h5,p {
 
 p {
   font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .App {
@@ -23,7 +24,7 @@ p {
   overflow-x: hidden;
 }
 
-.top__contents {
+.top__contents-wrap {
   background: rgba(255, 255, 255, 0.6);
   padding: 20px 10px;
 }
@@ -37,7 +38,6 @@ p {
 
 .display-top {
   position: relative;
-  height: 100vh;
 }
 
 .hands {
@@ -77,6 +77,18 @@ p {
   color: #fff;
   font-size: 2.6rem;
 }
+
+.lyt {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.lyt-img {}
+
+.lyt-text {}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

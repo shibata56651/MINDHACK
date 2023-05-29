@@ -1,71 +1,137 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { TopContents } from './index';
+import { About, Info, Story, World } from './pages/index';
 
 import logo from './../mh-logo.webp';
 import leftHand from './../sozai/hands/mindhack_hand_L.png';
 import rightHand from './../sozai/hands/mindhack_hand_R.png';
-import redFlower from './../flower-icon-01.webp';
-import blueFlower from './../flower-icon-02.webp';
-import yellowFlower from './../flower-icon-03.webp';
 
 const Top = () => {
-  const [context, setContext] = useState(null);
-  const [loaded, setLoaded] = useState(0);
-  const [angle, setAngle] = useState(0);
+  // const [context, setContext] = useState(null);
+  // const [loaded, setLoaded] = useState(0);
+  const [changePage, setChangePage] = useState('TOP');
 
-  // let count = 1;
+  // const flowers = [
+  //   redFlower,
+  //   blueFlower,
+  //   yellowFlower
+  // ]
+
+  // let images = [];
+
+  // useEffect(() => {
+    // for (const i in flowers) {
+    //   images[i] = new Image();
+    //     images[i].src = flowers[i];
+    // }
+
+    // const canvas = document.getElementById('mv');
+    // const ctx = canvas.getContext('2d');
+    // let angle = 5;
+
+    // canvas.width = canvas.naturalWidth;
+    // canvas.height = canvas.naturalHeight;
+
+    // images.forEach((element, i) => {
+    //   element.onload = () => {
+    //     setInterval(() => {
+    //       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    //       angle++;
+
+    //       ctx.translate(canvas.width / 2, canvas.height / 2);
+    //       ctx.rotate((angle * Math.PI) / 180);
+    //       ctx.drawImage(
+    //         element,
+    //         -canvas.width / 2,
+    //         -canvas.height / 2,
+    //         canvas.width,
+    //         canvas.height,
+    //       );
+    //       ctx.rotate((-angle * Math.PI) / 180);
+    //       ctx.translate(-canvas.width / 2, -canvas.height / 2);
   
-  // const canvas = document.getElementById('mv');
+    //       // if (angle === 360) {
+    //       //   setAngle(0);
+    //       // }
+    //     }, 300);
+    //   }
+    // });
 
-  // useEffect(() => {
-  //   const ctx = canvas.getContext('2d');
-  //   ctx.width = window.innerWidth;
-  //   ctx.height = window.innerHeight;
-  //   setContext(ctx);
+    // let redFlowerImg = new Image();
+    // let blueFlowerImg = new Image();
+    // let yellowFlowerImg = new Image();
+    // redFlowerImg.src = redFlower;
+    // blueFlowerImg.src = blueFlower;
+    // yellowFlowerImg.src = yellowFlower;
+
+    // redFlowerImg.onload = () => {
+    //   setInterval(() => {
+    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    //     angle++;
+
+    //     ctx.translate(canvas.width / 2, canvas.height / 2);
+    //     ctx.rotate((angle * Math.PI) / 180);
+    //     ctx.drawImage(
+    //       redFlowerImg,
+    //       -canvas.width / 2,
+    //       -canvas.height / 2,
+    //       canvas.width,
+    //       canvas.height,
+    //     );
+
+    //     ctx.rotate((-angle * Math.PI) / 180);
+    //     ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+    //     // if (angle === 360) {
+    //     //   setAngle(0);
+    //     // }
+    //   }, 300);
+    // }
   // }, []);
 
-  // useEffect(() => {
-  //   if(context!==null) {
-  //     let redFlowerImg = new Image();
-  //     let blueFlowerImg = new Image();
-  //     let yellowFlowerImg = new Image();
-  //     redFlowerImg.src = redFlower;
-  //     blueFlowerImg.src = blueFlower;
-  //     yellowFlowerImg.src = yellowFlower;
+  return <BrowserRouter>
+  <div className='content'>
+    <header>
+      <div className='header-list'>
+        <ul>
+          {/* <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => {setChangePage('TOP')}}><span className='header-list__link-text'>TOP</span></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('ABOUT')}><span className='header-list__link-text'>ABOUT</span></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('WORLD')}><span className='header-list__link-text'>WORLD</span></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('STORY')}><span className='header-list__link-text'>STORY</span></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('INFO')}><span className='header-list__link-text'>INFO</span></button></li> */}
+          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/" className='header-list__link-text'>TOP</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/about" className='header-list__link-text'>ABOUT</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/world" className='header-list__link-text'>WORLD</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/story" className='header-list__link-text'>STORY</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/info" className='header-list__link-text'>INFO</Link></button></li>
+        </ul>
+      </div>
+    </header>
 
-  //     redFlowerImg.onload = () => {
-  //       setInterval(() => {
-  //         console.log(angle)
-  //         context.clearRect(0, 0, canvas.width, canvas.height);
-  //         context.beginPath();
-  //         context.drawImage(redFlowerImg, -(redFlowerImg.width / 2), -(redFlowerImg.height / 2));
-  //         context.rotate(count * Math.PI / 180);
-  //         count++;
-  //       }, 1000);
-  //     }
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if(loaded) {
-      
-  //   }
-  // }, [loaded]);
-
-  return <div className='top__container'>
-    <div className='display-top'>
-      {/* <canvas id='mv'> */}
-        <img src={logo} className="display-top__logo" alt="" />
-      <motion.div className='hands' initial={{ opacity: 0, translateY: 50 }} animate={{ opacity: 1, translateY: 0 }} exit={{ opacity: 0, translateY: 50 }} transition={{ duration: 0.8, ease: 'easeInOut' }}>
-        <img src={leftHand} className="hands__left" alt="" />
-        <img src={rightHand} className="hands__right" alt="" />
-      </motion.div>
-      {/* </canvas> */}
-      <h2 className='hdg__style1'>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</h2>
-      <TopContents />
+    <div className='top__container'>
+      <div className='display-top'>
+        <div id='mv'>
+          <motion.img src={logo} className="display-top__logo" alt="" initial={{ opacity: 0, translateY: 50, translateX: -300 }} animate={{ opacity: 1, translateY: 0, translateX: -300 }} exit={{ opacity: 0, translateY: 50, translateX: -300 }} transition={{ duration: 0.8, ease: 'easeInOut' }} />
+        </div>
+        <motion.div className='hands' initial={{ opacity: 0, translateY: 50 }} animate={{ opacity: 1, translateY: 0 }} exit={{ opacity: 0, translateY: 50 }} transition={{ delay: 0.6, duration: 0.8, ease: 'easeInOut' }}>
+          <img src={leftHand} className="hands__left" alt="" />
+          <img src={rightHand} className="hands__right" alt="" />
+        </motion.div>
+      </div>
+      <Routes>
+        <Route path="/" element={<TopContents />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/story" element={<Story />} />
+        <Route path="/world" element={<World />} />
+      </Routes>
     </div>
   </div>
+  </BrowserRouter>
 }
 
 export default Top;

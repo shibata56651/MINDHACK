@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import logo from './../mh-logo.webp';
-import leftHand from './../sozai/hands/mindhack_hand_L.png';
-import rightHand from './../sozai/hands/mindhack_hand_R.png';
-import redFlower from './../flower-icon-01.webp';
-import blueFlower from './../flower-icon-02.webp';
-import yellowFlower from './../flower-icon-03.webp';
+import ltyImg from './../MINDHACK_ClappingHands_JP.gif';
 
 const TopContents = () => {
   const [context, setContext] = useState(null);
@@ -14,7 +9,20 @@ const TopContents = () => {
   const [angle, setAngle] = useState(0);
 
   return <main className='top__contents'>
+    <h2 className='hdg__style1'>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</h2>
+
+    <div className='top__contents-wrap'>
     <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+
+      <div className='lyt'>
+        <div className='lyt-text'>
+          <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+        </div>
+        <div className='lyt-img'>
+          <img src={ltyImg} alt="" />
+        </div>
+      </div>
+    </div>
   </main>
 }
 
