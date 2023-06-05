@@ -1,0 +1,10 @@
+新しいプロジェクト
+
+Porch
+
+API:Laravel
+front:Laravel+Next.js+TypeScript
+invitationFunction:supabase
+app:Flutter
+pushFunction:FCM(firebase)
+Server:supabase

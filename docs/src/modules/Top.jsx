@@ -98,16 +98,11 @@ const Top = () => {
     <header>
       <div className='header-list'>
         <ul>
-          {/* <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => {setChangePage('TOP')}}><span className='header-list__link-text'>TOP</span></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('ABOUT')}><span className='header-list__link-text'>ABOUT</span></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('WORLD')}><span className='header-list__link-text'>WORLD</span></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('STORY')}><span className='header-list__link-text'>STORY</span></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link' onClick={() => setChangePage('INFO')}><span className='header-list__link-text'>INFO</span></button></li> */}
-          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/" className='header-list__link-text'>TOP</Link></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/about" className='header-list__link-text'>ABOUT</Link></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/world" className='header-list__link-text'>WORLD</Link></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/story" className='header-list__link-text'>STORY</Link></button></li>
-          <li className='header-list__items'><button type='button' className='header-list__link'><Link to="/info" className='header-list__link-text'>INFO</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-button'><Link to="/" className='header-list__link-text'>TOP</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-button'><Link to="/about" className='header-list__link-text'>ABOUT</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-button'><Link to="/world" className='header-list__link-text'>WORLD</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-button'><Link to="/story" className='header-list__link-text'>STORY</Link></button></li>
+          <li className='header-list__items'><button type='button' className='header-button'><Link to="/info" className='header-list__link-text'>INFO</Link></button></li>
         </ul>
       </div>
     </header>

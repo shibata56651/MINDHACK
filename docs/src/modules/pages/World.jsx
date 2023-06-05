@@ -1,7 +1,25 @@
+import { motion } from 'framer-motion';
+import ltyImg from './../../MINDHACK_ClappingHands_JP.gif';
+
 const WORLD = () => {
-  return <div>
-  <p>WORLD</p>
+  return <main className='top__contents'>
+  <h2 className='hdg__style1'>World</h2>
+
+  <div className='top__contents-wrap'>
+  <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+
+    <div className='lyt'>
+      <div className='lyt-text'>
+        <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+      </div>
+      <div className='lyt-img'>
+        <img src={ltyImg} alt="" />
+      </div>
+    </div>
+
+    <p className='text-loead'><b>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</b></p>
   </div>
+</main>
 }
 
 export default WORLD;

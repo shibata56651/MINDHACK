@@ -9,7 +9,7 @@ const TopContents = () => {
   const [angle, setAngle] = useState(0);
 
   return <main className='top__contents'>
-    <h2 className='hdg__style1'>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</h2>
+    <h2 className='hdg__style1'>Top</h2>
 
     <div className='top__contents-wrap'>
     <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
@@ -22,6 +22,8 @@ const TopContents = () => {
           <img src={ltyImg} alt="" />
         </div>
       </div>
+
+      <p className='text-loead'><b>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</b></p>
     </div>
   </main>
 }
